@@ -1,25 +1,29 @@
-import { Button, Dialog, DialogActions, DialogContent, DialogTitle, IconButton } from '@mui/material';
+import { Button, Dialog, DialogActions, DialogContent, DialogTitle, Grid, IconButton, TextareaAutosize, Typography } from '@mui/material';
 import { useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
+import { Delete } from '@mui/icons-material';
 import { styled } from '@mui/material/styles';
 import ECTReactComponent from './ECTReactComponent';
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
-  '& .MuiDialogContent-root': {
-    padding: theme.spacing(2),
-  },
-  '& .MuiDialogActions-root': {
-    padding: theme.spacing(1),
-  },
+    '& .MuiDialogContent-root': {
+        padding: theme.spacing(2),
+    },
+    '& .MuiDialogActions-root': {
+        padding: theme.spacing(1),
+    },
 }));
-function ModalUI() {
+function ModalUI({
+    index,
+    
+  }) {
     const [open, setOpen] = useState(false);
 
     const handleClickOpen = () => {
-      setOpen(true);
+        setOpen(true);
     };
     const handleClose = () => {
-      setOpen(false);
+        setOpen(false);
     };
     return (
         <div>
@@ -54,6 +58,35 @@ function ModalUI() {
                         Save changes
                     </Button>
                 </DialogActions>
+                <li key={index}>
+                    <Grid container spacing={2} alignItems="center">
+                        <Grid item xs={3}>
+                            <Typography variant="h6" component="div">
+                                {/* <b>{diagnosis.value}</b> */}
+                                jkljdls
+                            </Typography>
+                        </Grid>
+                        <Grid item xs={2}>
+                            <div className="diagnosis-notes">
+                                <TextareaAutosize
+                                    className="investigation-list-textarea"
+                                    
+                                    placeholder="Add Notes"
+                                />
+                            </div>
+                        </Grid>
+                        <Grid item xs={1} className="text-end">
+                            <IconButton
+                                
+                                type="button"
+                                className="cross-btn-red btn-sm me-3 diagnosis-btn"
+                                aria-label="Close"
+                            >
+                                <Delete />
+                            </IconButton>
+                        </Grid>
+                    </Grid>
+                </li>
             </BootstrapDialog>
         </div>
     )

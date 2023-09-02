@@ -1,13 +1,13 @@
 
 import './App.css';
-import ADFFD from './components/OldDeathUI';
+import ModalUI from './components/ModalUI';
 
 function App() {
 
   return (
     <div>
       <br/>
-      <ADFFD/>
+      <ModalUI />
       {/* <Box>
       <FormControl sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
         <Typography sx={{ minWidth: 150, pr: 2 }}>Label Name:</Typography>
