@@ -1,19 +1,22 @@
 
 import './App.css';
-import ModalUI from './components/ModalUI';
+import DiseaseReportB from './components/DiseaseReportB';
+import DiseaseReportC from './components/DiseaseReportC';
+import DiseaseReportD from './components/DiseaseReportD';
+import Modal from './components/Modal';
 
 function App() {
 
   return (
     <div>
       <br/>
-      <ModalUI />
-      {/* <Box>
-      <FormControl sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-        <Typography sx={{ minWidth: 150, pr: 2 }}>Label Name:</Typography>
-        <TextField size="small" variant="outlined" />
-      </FormControl>
-    </Box> */}
+      <Modal />
+      <br/>
+      <DiseaseReportB/>
+      <br/>
+      <DiseaseReportC />
+      <br/>
+      <DiseaseReportD />
     </div>
   );
 }
